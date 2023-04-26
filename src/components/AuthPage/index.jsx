@@ -30,7 +30,11 @@ function AuthPage() {
           </Button>
         </div>
         <div className={styles.myTradesContent__btn}>
-          <Button type="primary" htmlType="submit" style={{ margin: "auto" }}>
+          <Button
+            type="primary"
+            htmlType="submit"
+            style={{ margin: "auto", width: "100%" }}
+          >
             <a href="">Написать сотруднику</a>
           </Button>
         </div>
