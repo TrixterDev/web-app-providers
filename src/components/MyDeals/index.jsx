@@ -14,16 +14,18 @@ const MyDeals = () => {
           <a href="">Написать сотруднику</a>
         </Button>
       </div>
-      {deals.map((item, index) => {
-        return (
-          <div key={index + Math.random()} className={styles.deals__list}>
-            <h3>{item.title}</h3>
-            <Button type="primary">
-              <Link to="/">Подробнее</Link>
-            </Button>
-          </div>
-        );
-      })}
+      <div className={styles.deals__cards}>
+        {deals.map((item, index) => {
+          return (
+            <div key={index + Math.random()} className={styles.deals__list}>
+              <h3>{item.title}</h3>
+              <Button type="primary">
+                <Link to="/">Подробнее</Link>
+              </Button>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
