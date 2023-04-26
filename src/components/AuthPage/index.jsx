@@ -7,9 +7,9 @@ function AuthPage() {
   return (
     <div className={styles.myTradesContainer}>
       <div className={styles.myTradesContent}>
-        <h3>Сделки или оформить заказ:</h3>
+        <h3>Ваши сделки или Ваша визитка:</h3>
         <p className={styles.myTradesDescription}>
-          Если у вас нету текущих сделок, вы можете оформить заказ
+          Выбириет что вас интересует
         </p>
 
         <div className={styles.btn}>
