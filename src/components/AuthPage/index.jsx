@@ -36,7 +36,7 @@ function AuthPage() {
             htmlType="submit"
             style={{ margin: "auto", width: "100%" }}
           >
-            <a href="">Написать сотруднику</a>
+            <a href="https://t.me/botForProviders_bot">Написать сотруднику</a>
           </Button>
         </div>
       </div>
