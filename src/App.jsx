@@ -5,6 +5,7 @@ import AuthPage from "./components/AuthPage";
 import MyDeals from "./components/MyDeals";
 import BusinesCrd from "./components/BusinesCard";
 import Info from "./components/MyDeals/info";
+import Test from "./components/Test";
 
 const App = () => {
   window.Telegram.WebApp;
@@ -14,6 +15,7 @@ const App = () => {
       <Route path="/web-app-providers/" element={<Form />} />
       <Route path="/web-app-providers/doneAuth" element={<AuthPage />} />
       <Route path="/web-app-providers/businesCard" element={<BusinesCrd />} />
+      <Route path="/web-app-providers/xz" element={<Test />} />
       <Route path="/web-app-providers/deals">
         <Route index element={<MyDeals />} />
         <Route path=":id" element={<Info />} />

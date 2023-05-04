@@ -4,7 +4,6 @@ import { Button } from "antd";
 
 function AuthPage() {
   const redirect = useNavigate();
-  // console.log(location.pathname.substring(19));
   return (
     <div className={styles.myTradesContainer}>
       <div className={styles.myTradesContent}>

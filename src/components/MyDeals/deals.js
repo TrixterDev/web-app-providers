@@ -1,35 +1,27 @@
 export const deals = [
   {
-    title: "deals",
+    id: 1,
+    desc: "desc1",
+    title: "deals1",
   },
   {
-    title: "deals",
+    id: 2,
+    desc: "desc2",
+    title: "deals2",
   },
   {
-    title: "deals",
+    id: 3,
+    desc: "desc3",
+    title: "deals3",
   },
   {
-    title: "deals",
+    id: 4,
+    desc: "desc4",
+    title: "deals4",
   },
   {
-    title: "deals",
-  },
-  {
-    title: "deals",
-  },
-  {
-    title: "deals",
-  },
-  {
-    title: "deals",
-  },
-  {
-    title: "deals",
-  },
-  {
-    title: "deals",
-  },
-  {
-    title: "deals",
+    id: 5,
+    desc: "desc5",
+    title: "deals5",
   },
 ];

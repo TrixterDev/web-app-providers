@@ -9,6 +9,23 @@ function Login() {
   const navigate = useNavigate();
   const [error, setError] = useState(false);
 
+  const [session, setSession] = useState({
+    login: "",
+    password: "",
+  });
+
+  const changeHandle = (event) => {
+    setSession((session) => {
+      return {
+        ...session,
+        [event.target.name]: event.target.value,
+      };
+    });
+  };
+
+  if (localStorage.getItem("login")) {
+    navigate("/web-app-providers/doneAuth");
+  }
   const onFinish = (values) => {
     const { username, password } = values;
     const employee = clients.users.find(
@@ -16,6 +33,11 @@ function Login() {
     );
     if (employee) {
       navigate("/web-app-providers/doneAuth");
+      localStorage.setItem("login", session.login);
+      localStorage.setItem("password", session.password);
+      setInterval(() => {
+        localStorage.clear();
+      }, 300000);
     } else {
       setError(true);
       console.log("Нету такого пользователя");
@@ -53,7 +75,7 @@ function Login() {
             },
           ]}
         >
-          <Input placeholder="Логин" />
+          <Input placeholder="Логин" name="login" onChange={changeHandle} />
         </Form.Item>
 
         <Form.Item
@@ -65,7 +87,11 @@ function Login() {
             },
           ]}
         >
-          <Input.Password placeholder="Пароль" />
+          <Input.Password
+            placeholder="Пароль"
+            name="password"
+            onChange={changeHandle}
+          />
         </Form.Item>
 
         <Form.Item>
